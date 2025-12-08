@@ -6,12 +6,14 @@
 
 {% block body %}
 
-    <form method="POST" accept="{% url 'new_page' %}">
-        {% csrf_token %}
-        <input id="title_field" type="text" class='form-control' name="title" placeholder="Title" value="{{ form.title.value|default_if_none:'' }}">
-        <textarea id="text_field" class='form-control' placeholder="Enter markdown contents" name="content">{{ form.content.value|default_if_none:'' }}</textarea>
-        <input id="button" type="submit" value="submit">
-    </form>
+    <main>
+        <form method="POST" accept="{% url 'new_page' %}">
+            {% csrf_token %}
+            <input id="title_field" type="text" class='form-control' name="title" placeholder="Title" value="{{ form.title.value|default_if_none:'' }}">
+            <textarea id="text_field" class='form-control' placeholder="Enter markdown contents" name="content">{{ form.content.value|default_if_none:'' }}</textarea>
+            <input id="button" type="submit" value="submit">
+        </form>        
+    </main>
 
 
 
