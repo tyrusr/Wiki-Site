@@ -6,13 +6,18 @@
 
 {% block body %}
 
-    <p>{{ var|safe }}</p>
+    <main>
+        <section>
+            <p>{{ var|safe }}</p>
+        </section>
 
-    <form method="get" action="{% url 'edit_page' title %}">
-        {% csrf_token %}
-        <input type="submit" value="Edit">
-    </form>
-    
+        <section>
+            <form method="get" action="{% url 'edit_page' title %}">
+                {% csrf_token %}
+                <input type="submit" value="Edit">
+            </form>
+        </section>
+    </main>
     
     
 
