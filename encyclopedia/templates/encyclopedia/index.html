@@ -5,14 +5,16 @@
 {% endblock %}
 
 {% block body %}
-    <h1>All Pages</h1>
+    <main>
+        <h1>All Pages</h1>
 
-    <nav>
-        <ul>
-            {% for entry in entries %}
-                <li><a href="{% url 'entrypage' entry %}">{{ entry }}</a></li>
-            {% endfor %}
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                {% for entry in entries %}
+                    <li><a href="{% url 'entrypage' entry %}">{{ entry }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </main>
 
 {% endblock %}
