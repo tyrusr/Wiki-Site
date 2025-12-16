@@ -5,12 +5,15 @@
 {% endblock %}
 
 {% block body %}
-    
-    <h1>All Pages</h1>
-
-    <ul>
-        {% for entry in partial_query %}
-            <li><a href="{% url 'entrypage' entry %}">{{ entry }}</a></li>
-        {% endfor %}
-    </ul>
+    <main>
+        <h1>All Pages</h1>
+        
+        <nav>
+            <ul>
+                {% for entry in partial_query %}
+                    <li><a href="{% url 'entrypage' entry %}">{{ entry }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </main>
 {% endblock %}
